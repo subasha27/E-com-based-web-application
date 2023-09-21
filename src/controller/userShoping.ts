@@ -103,6 +103,7 @@ class UserShopee {
                     return res.status(403).json({ error: 'You can only buy a maximum of 5 products in total per day.' });
                 }
 
+                const toatalInvoice = []
                 // Process each product in the array
                 for (const item of productData) {
                     if (typeof item.product_id === 'number' && typeof item.quantity === 'number') {
@@ -118,14 +119,14 @@ class UserShopee {
                             orderIdTo = order.id
 
                             const createdInvoice = await invoiceGen(orderIdTo)
-                            sendEmail(user as string, createdInvoice as any)
-
+                            toatalInvoice.push(createdInvoice);
 
                         } else {
                             return res.send({ message: `Choose less Quantity, The available quantity for product ${productDetail.productName} is: ${productDetail.stock}` });
                         }
                     }
                 }
+                sendEmail(user as string, toatalInvoice as any)
                 return res.status(201).json({ message: 'Orders placed successfully' });
             }
         } catch (err) {
