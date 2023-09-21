@@ -1,6 +1,6 @@
 import express from "express";
 import productController from "../controller/productsController";
-import authenticateToken from "../helpers/middleware";
+import authenticateToken from "../Middleware/middleware";
 const router = express.Router();
 
 router.post("/createProduct",authenticateToken,productController.createProduct);

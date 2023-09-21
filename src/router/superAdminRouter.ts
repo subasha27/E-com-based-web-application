@@ -1,7 +1,7 @@
 import express from "express";
 import SuperAdminController from "../controller/SuperAdminController";
 import StaffController from "../controller/StaffController";
-import authenticateToken from "../helpers/middleware";
+import authenticateToken from "../Middleware/middleware";
 const router = express.Router();
 
 

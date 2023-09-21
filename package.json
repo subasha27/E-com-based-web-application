@@ -39,6 +39,7 @@
     "passport": "^0.6.0",
     "passport-google-oauth": "^2.0.0",
     "passport-google-oauth20": "^2.0.0",
+    "pdf-lib": "^1.17.1",
     "sequelize": "^6.33.0",
     "typescript": "^5.2.2",
     "xlsx": "^0.18.5"
