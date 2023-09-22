@@ -2,6 +2,7 @@ import nodemailer from "nodemailer";
 import OrderPlace from "../model/userShopingModel";
 
 
+
 const invoiceGen = async (orderId: number) => {
 
     const orders = await OrderPlace.findAll({ where: { id: orderId } });

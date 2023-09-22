@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const SuperAdminController_1 = __importDefault(require("../controller/SuperAdminController"));
 const StaffController_1 = __importDefault(require("../controller/StaffController"));
-const middleware_1 = __importDefault(require("../helpers/middleware"));
+const middleware_1 = __importDefault(require("../Middleware/middleware"));
 const router = express_1.default.Router();
 //Admin creation and login
 router.post("/SuperAdmin", SuperAdminController_1.default.superAdminCreate);
